@@ -19,8 +19,8 @@
   
 			with open('POSCAR', 'r') as f, open('SD', 'w') as g:
 
-			  for line in range(5): 
-			    g.write(f.readline())
+				for line in range(5): 
+			  	g.write(f.readline())
    
 			  atoms = f.readline(); g.write(atoms); atoms = atoms.split()
 			  nums = f.readline(); g.write(nums); nums = nums.split()
@@ -102,9 +102,7 @@
   }
 
 	waveFind () {
-
 		local d
-
 		if [[ $1 == d ]]; then d=-delete; fi
 		eval "find -name WAVECAR -not -empty $d"
   }
